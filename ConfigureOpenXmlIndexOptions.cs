@@ -26,7 +26,7 @@ namespace UmbracoExamine.OpenXml
             if (name.Equals(OpenXmlIndexConstants.OpenXmlIndexName))
             {
                 options.Analyzer = new StandardAnalyzer(LuceneVersion.LUCENE_48);
-                options.Validator = new OpenXmlValueSetValidator(null);
+                options.Validator = new OpenXmlValueSetValidator(true, null);
                 options.FieldDefinitions = new FieldDefinitionCollection(
                     new FieldDefinition(OpenXmlIndexConstants.OpenXmlContentFieldName, FieldDefinitionTypes.FullText));
 
